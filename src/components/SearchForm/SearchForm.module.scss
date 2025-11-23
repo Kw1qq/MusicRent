@@ -1,0 +1,52 @@
+@use '@/assets/styles/helpers' as *;
+
+.form {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-inline: 10px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-gray-alt);
+  background-color: var(--color-light);
+  transition: all 0.2s ease;
+
+  @include hover {
+    border: 1px solid var(--color-dark);
+  }
+
+  &:has(.input:focus) {
+    border: 1px solid var(--color-dark);
+  }
+
+  @include mobile {
+    order: 1;
+    width: 100%;
+    padding-inline: 10px;
+  }
+}
+
+.input {
+  border: none;
+  padding-block: 16px;
+  min-width: 470px;
+
+  &::placeholder {
+    color: var(--color-gray-alt);
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  @include mobile {
+    width: 100%;
+    min-width: 0;
+    padding-block: 10px;
+  }
+}
+
+.search {
+  border: none;
+  background: none;
+  padding: 0;
+}

@@ -1,0 +1,70 @@
+@use '@/assets/styles/helpers' as *;
+
+.footer {
+  background-color: var(--color-black);
+  padding-block: var(--section-padding-y);
+  color: var(--color-gray-alt);
+  margin-top: auto;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 70px;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  @include mobile-s {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.bottom {
+  padding-top: var(--section-padding-y);
+  border-top: 1px solid var(--color-gray-alt);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  color: var(--color-light);
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.link {
+  @include hover {
+    opacity: 0.7;
+  }
+}
+
+.logotypes {
+  display: flex;
+  gap: 12px;
+}
+
+.logotype {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-light);
+  border-radius: var(--border-radius);
+  width: 36px;
+  height: 36px;
+}

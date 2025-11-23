@@ -1,0 +1,45 @@
+@use '@/assets/styles/helpers' as *;
+
+.header {
+  background-color: var(--color-light);
+  padding-block: 10px;
+  width: 100%;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include mobile {
+    flex-wrap: wrap;
+    column-gap: 70px;
+    row-gap: 5px;
+  }
+}
+
+.group {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+
+  button {
+    display: flex;
+  }
+
+  @include tablet {
+    button {
+      display: none;
+    }
+  }
+}
+
+.logo {
+  @include mobile {
+    width: 70px;
+  }
+}

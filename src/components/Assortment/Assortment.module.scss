@@ -1,0 +1,15 @@
+@use '@/assets/styles/helpers' as *;
+
+.assortment {
+  padding-block: var(--section-padding-y);
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 300px auto;
+  gap: 20px;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}

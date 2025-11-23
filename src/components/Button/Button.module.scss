@@ -1,0 +1,37 @@
+@use '@/assets/styles/helpers' as *;
+
+.button {
+  align-self: stretch;
+  padding: 7px 10px;
+  border-radius: var(--border-radius-small);
+  border: 1px solid var(--color-orange);
+  background-color: var(--color-orange);
+  color: var(--color-light);
+
+  @include hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    background-color: var(--color-light);
+  }
+}
+
+.link {
+  align-self: stretch;
+  padding: 7px 10px;
+  border-radius: var(--border-radius-small);
+  border: var(--border);
+  background: none;
+  text-align: center;
+  display: block;
+
+
+  @include hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    background-color: var(--color-light);
+  }
+}

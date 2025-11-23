@@ -1,0 +1,11 @@
+@use '@/assets/styles/helpers' as *;
+
+.banner {
+  padding-block: var(--section-padding-y);
+}
+
+.inner {
+  @include mobile {
+    padding-inline: 0px !important;
+  }
+}

@@ -1,0 +1,75 @@
+@use '@/assets/styles/helpers' as *;
+
+.filters {
+  padding: 15px 20px;
+  background-color: var(--color-gray);
+  border-radius: var(--border-radius);
+  height: fit-content;
+}
+
+.inner {
+  @include mobile {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: 0.3s all ease;
+
+    &.open {
+      max-height: 1000px;
+    }
+  }
+}
+
+.button {
+  padding: 0;
+  background: none;
+  border: none;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-left: 3px solid var(--color-black);
+    border-bottom: 3px solid var(--color-black);
+    rotate: -45deg;
+    transition: transform 0.1s ease;
+    transform-origin: center;
+  }
+
+  &.open {
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.checkbox {
+  display: flex;
+  gap: 10px;
+}
+
+.price {
+  display: flex;
+  gap: 20px;
+}
+
+.input {
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-light);
+  border: none;
+  width: 70px;
+  height: 30px;
+}

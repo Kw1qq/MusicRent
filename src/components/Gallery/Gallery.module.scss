@@ -1,0 +1,39 @@
+@use '@/assets/styles/helpers' as *;
+
+.gallery {
+  display: grid;
+  grid-template-columns: auto 108px;
+  gap: 15px;
+
+  @include mobile-l {
+    grid-template-columns: 1fr;
+  }
+}
+
+.image {
+  width: 500px;
+  height: 500px;
+  object-fit: contain;
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @include mobile-l {
+    flex-direction: row;
+  }
+}
+
+.button {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.imgsmall {
+  width: 108px;
+  height: 108px;
+  object-fit: contain;
+}

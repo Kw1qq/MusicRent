@@ -1,0 +1,74 @@
+@use '@/assets/styles/helpers' as *;
+
+.card {
+  display: flex;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  background-color: var(--color-gray);
+  position: relative;
+  box-shadow: var(--shadow);
+
+}
+
+.image {
+  width: 186px;
+  height: 186px;
+  object-fit: contain;
+  background-color: var(--color-light);
+
+  @include mobile-s {
+    max-width: 150px;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 15px 20px;
+  flex-grow: 1;
+  gap: 20px;
+
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @include mobile-s {
+    flex-direction: column-reverse;
+  }
+}
+
+.title {
+  padding: 0;
+}
+
+.price {
+  padding: 0;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+
+  @include mobile-s {
+    flex-direction: row;
+    align-self: flex-end;
+  }
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.wrapper {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
